@@ -137,7 +137,7 @@ async function getClaimAmount() {
   if (isConnected) {
     let web3E = new Web3(new Web3.providers.HttpProvider("https://goerli.infura.io/v3/00b3826c843c45e6acfcfaf3e0093e3e"));
     const contractETH = new web3E.eth.Contract(abi, "0xd1884dDC027A8bA671Fe2Ab12bE40D5ec05811E7"); // contract in ETH that has the ownedOf
-    let tokensOwned = await contractETH.methods.tokensOwnedBy(selectedAccount,"0x65a208E99d3Fa985b10a4E5c8469F0d914fE6A50").call(); // nft contract address
+    let tokensOwned = await contractETH.methods.tokensOwnedBy(selectedAccount,"0x255C5F67B0dc68dC793255D30f7e8ae432312db0").call(); // nft contract address
 console.log(tokensOwned)
     const web3 = new Web3(provider);
     const contractPoly = new web3.eth.Contract(abi, "0x7f47CA66Db5Ca10d88F835051d4662dF55D6b1BB");// staking contract on poly
