@@ -1,0 +1,169 @@
+body {
+    height: 100vh;
+    background-image: url('../images/background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #B6B7B1;
+}
+
+a:focus,
+a:active {
+    color: black !important;
+}
+
+.logo {
+    width: 400px;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+.sochiallogo {
+    width: 25px;
+}
+
+.mint {
+    background-color: #70716c9b;
+    margin-top: 20vh;
+}
+
+.mintimg1 {
+    width: 250px;
+    top: -110px;
+    left: -165px;
+}
+
+.mintimg2 {
+    width: 300px;
+    top: -70px;
+    right: -250px;
+}
+
+.sochial {
+    background-color: #37c51e;
+    width: fit-content;
+}
+
+.mintinput {
+    width: 200px;
+    height: 35px;
+    background-color: #474745;
+    border-color: #222;
+    color: white;
+}
+
+.mintinput:focus-visible {
+    width: 150px;
+    height: 35px;
+    background-color: #474745;
+    border-color: #222;
+}
+
+.mintbtn {
+    width: 200px;
+    background-color: #37c51e;
+    color: white;
+    border: 0px;
+}
+
+.mintbtn:hover {
+    background-color: #2bc010;
+    color: white;
+    border: 0px;
+}
+
+.font1 {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    color: #37c51e;
+    text-shadow: 0 0 10px black, 0 0 10px black, 0 0 10px black;
+}
+
+.font2 {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+    color: #37c51e;
+    text-shadow: 0 0 10px black, 0 0 10px black, 0 0 10px black;
+}
+
+.font3 {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+}
+
+.fitContent {
+    width: fit-content;
+}
+
+.plusBtn {
+    transform: translateY(-50%);
+    top: 40%;
+    right: 1%;
+}
+
+.minusBtn {
+    transform: translateY(-50%);
+    top: 40%;
+    left: 5%;
+}
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+:focus-visible {
+    outline-width: 0px;
+}
+
+.btn-check:focus+.btn,
+.btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0rem rgb(13 110 253 / 25%);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .logo {
+        width: 350px;
+    }
+
+    .mintdiv {
+        width: fit-content;
+    }
+
+    .mintbtn {
+    width: 200px;
+    }
+
+    .plusBtn {
+        top: 50%;
+    }
+
+    .minusBtn {
+        top: 50%;
+    }
+}
+
+.tokenIMG{
+    width: 255px;
+}
