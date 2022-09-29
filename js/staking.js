@@ -123,7 +123,7 @@ async function claim() {
       toastr.error(`ERROR!`);
     } else {
       const web3 = new Web3(provider);
-      const contract = new web3.eth.Contract(abi, "0x7f47CA66Db5Ca10d88F835051d4662dF55D6b1BB"); // staking contract on poly
+      const contract = new web3.eth.Contract(abi, "0x7239951d608e65D0CFeEd610d015318C6F15c195"); // staking contract on poly
       contract.methods.claim(req.data.signature, req.data.randomId, req.data.tokens).send({
         from: selectedAccount,
       }).then(state=>{
@@ -135,12 +135,12 @@ async function claim() {
 
 async function getClaimAmount() {
   if (isConnected) {
-    let web3E = new Web3(new Web3.providers.HttpProvider("https://goerli.infura.io/v3/00b3826c843c45e6acfcfaf3e0093e3e"));
-    const contractETH = new web3E.eth.Contract(abi, "0xd1884dDC027A8bA671Fe2Ab12bE40D5ec05811E7"); // contract in ETH that has the ownedOf
+    let web3E = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/00b3826c843c45e6acfcfaf3e0093e3e"));
+    const contractETH = new web3E.eth.Contract(abi, "0x7466cb13bbebbf3f404ffa1e4de9e7b841c85514"); // contract in ETH that has the ownedOf
     let tokensOwned = await contractETH.methods.tokensOwnedBy(selectedAccount,"0x255C5F67B0dc68dC793255D30f7e8ae432312db0").call(); // nft contract address
 console.log(tokensOwned)
     const web3 = new Web3(provider);
-    const contractPoly = new web3.eth.Contract(abi, "0x7f47CA66Db5Ca10d88F835051d4662dF55D6b1BB");// staking contract on poly
+    const contractPoly = new web3.eth.Contract(abi, "0x7239951d608e65D0CFeEd610d015318C6F15c195");// staking contract on poly
     let totalClaimable = await contractPoly.methods.claimableFor(tokensOwned).call();
     console.log(web3.utils.fromWei(totalClaimable.toString(), "ether"));
     document.getElementById("claimableAmount").innerHTML = web3.utils.fromWei(totalClaimable.toString(), "ether") + " $Drippy"
